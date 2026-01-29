@@ -72,3 +72,4 @@ Once the services are up and running, you can access the Card Management Service
 ![img_2.png](readme-resources/img_2.png)
 ![img_3.png](readme-resources/img_3.png)
 ![img_4.png](readme-resources/img_4.png)
+![img_5.png](readme-resources/img_5.png)
