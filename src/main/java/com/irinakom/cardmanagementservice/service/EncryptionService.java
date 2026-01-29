@@ -10,7 +10,7 @@ import java.util.Base64;
 @Service
 public class EncryptionService {
 
-    @Value("${app.encryption.secret-key}")
+    @Value("${APP_ENCRYPTION_SECRET_KEY}")
     private String secretKey;
 
     public String encrypt(String plainText) {

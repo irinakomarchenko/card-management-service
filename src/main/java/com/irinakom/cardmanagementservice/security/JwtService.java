@@ -34,7 +34,7 @@ public class JwtService {
                 .claim("role", userDetails.getUser().getRole().name())
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + expirationMs))
-                .signWith(secretKey)  // ← Новый API (0.12.x)
+                .signWith(secretKey)
                 .compact();
     }
 
