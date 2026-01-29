@@ -13,8 +13,11 @@ import java.util.Optional;
 public interface CardRepository extends JpaRepository<Card, Long> {
 
     Page<Card> findByStatus(CardStatus status, Pageable pageable);
+
     Page<Card> findByOwner(User owner, Pageable pageable);
+
     Page<Card> findByOwnerAndStatus(User owner, CardStatus status, Pageable pageable);
+
     Optional<Card> findByIdAndOwner(Long id, User owner);
 
     @Lock(LockModeType.PESSIMISTIC_WRITE)

@@ -1,3 +1,26 @@
 spring:
   application:
     name: card-management-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/card_management
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  liquibase:
+    change-log: classpath:liquibase/db.changelog-master.yaml
+    enabled: true
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:change-me-please-very-secret}
+    expiration-ms: 3600000
